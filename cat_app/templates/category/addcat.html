@@ -1,0 +1,9 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+    <form method="POST" action="/prodcat/add_prod_savedata/">
+        {% csrf_token %}
+        {{form.as_p}}
+        <p>ad valeu</p>
+        <button type="submit" class="btn btn-primary btn-lg"><span>&nbsp;Add Category</span> </button>      
+    </form>
+{% endblock %}

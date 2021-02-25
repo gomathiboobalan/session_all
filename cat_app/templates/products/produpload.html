@@ -1,0 +1,8 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+    <form method="POST" enctype="multipart/form-data" action="/prodcat/upload_prod/">
+        {% csrf_token %}
+        <input type="file" name="myfile">
+        <button type="submit" class="btn btn-primary btn-lg"><span>&nbsp;Upload Product</span> </button>      
+    </form>
+{% endblock %}

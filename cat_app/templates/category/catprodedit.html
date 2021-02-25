@@ -1,0 +1,10 @@
+{% extends 'registration/base.html' %}
+{% block content %}
+<form action="{% url 'prod_cat:edit_c' pk %}" method="POST" >
+    <!-- See above: We're using the author_id that was passed to template via views render of the edit_author(...) function -->
+    {% csrf_token %} <!-- You're dealing with forms. csrf_token must come -->
+    {{ c_form.as_p }}
+    {{ formset.as_p }}
+    <input type="submit" value="submit">
+    </form>
+{% endblock %}
